@@ -10,14 +10,10 @@
 nav {
     display: flex;
     justify-content: space-between;
+    position: relative;
     padding: 20px;
-    align-items: center;
-    border-radius: 5px;
-    background: transparent;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     position: fixed; 
-    top: 0; 
-    left: 0; 
     width: 100%; 
     z-index: 1000; 
 }
@@ -55,8 +51,6 @@ nav {
 .nav-items {
     border: 1px solid;
     padding: 8px;
-    padding-left: 15px;
-    padding-right: 15px;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
 }
@@ -67,6 +61,55 @@ nav {
     font-family: "Poppins", sans-serif;
     font-size: 25px;
     color: #3d3d3d;
+}
+
+.toggle-btn i {
+    position: absolute;
+    display: none;
+    right: 2rem;
+    top: 15px;
+    margin-top: 7px;
+    color: rgb(0, 0, 0); /* Warna hitam sebelum scroll */
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s, top 0.3s; /* Tambahkan transisi untuk perubahan yang halus */
+}
+
+.scrolled .toggle-btn i {
+    color: rgb(255, 255, 255); /* Warna putih setelah scroll */
+    top: 10px;
+}
+
+.dropdown-menu {
+    display: none; 
+    position: absolute;
+    right: 2rem;
+    top: 70px; 
+    height: 0;
+    width: 300px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden; 
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.active {
+    height: 130px; 
+}
+
+.dropdown-menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drop-items{
+    font-size: 15px;
+    color: #f9f9f9;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
 }
 
 #item1 {
@@ -166,6 +209,7 @@ nav {
     width: 100%;
     height: 450px;
     display: block;
+    object-fit: cover;
 }
 .main-content-sub {
     text-align: center;
@@ -189,7 +233,7 @@ nav {
 /*Konten Form*/
 .main-form {
     width: 100%;
-    height: 690px;
+    height: 680px;
     display: flex;
     flex-direction: column;
     background-color: #f9f9f9;
@@ -197,6 +241,7 @@ nav {
     padding: 10px;
     margin-top: 10px;
 }
+
 .form-title {
     margin-top: 10px;
     margin-left: 20px;
@@ -205,6 +250,7 @@ nav {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
 }
+
 .form-paragraph {
     font-size: 15px;
     margin-top: 10px;
@@ -240,6 +286,7 @@ nav {
     font-size: 12px;
     opacity: 1; 
 }
+
 #name:focus {
     border-color: #4A90E2; 
     box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); 
@@ -272,6 +319,7 @@ nav {
     font-size: 12px;
     opacity: 1; 
 }
+
 #email:focus {
     border-color: #4A90E2; 
     box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); 
@@ -305,6 +353,7 @@ nav {
     font-size: 12px;
     opacity: 1; 
 }
+
 #phone:focus {
     border-color: #4A90E2; 
     box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); 
@@ -549,6 +598,11 @@ nav {
     position: relative;
 }
 
+.menu-content img:hover {
+    transform: scale(1.05); 
+    opacity: 1; 
+}
+
 .menu-content h2 {
     margin-top: 0;
     font-family: "Poppins", sans-serif;
@@ -561,6 +615,7 @@ nav {
     font-family: "Poppins", sans-serif;
     text-align: center;
 }
+
 
 /*Footer*/
 footer{
@@ -606,6 +661,7 @@ footer{
 }
 
 .footer-bottom{
+    position: relative;
     background: linear-gradient(135deg, #71b7e6,#9b59b6);
     width: 100%;
     padding: 10px 0;
@@ -651,3 +707,194 @@ footer{
     text-align: justify;
 }
 
+
+@media (max-width: 768px) {
+    nav {
+        width: 100%;
+        padding: 15px;
+        position: fixed;
+    }
+
+    .nav-container {
+        justify-content: center; 
+        margin: 0; 
+        flex-direction: row;
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    .nav-items {
+        display: none; 
+    }
+
+    .toggle-btn i {
+        display: block;
+    
+    }
+
+    .dropdown-menu{
+        display: block;
+    }
+
+    .main-title{
+        padding-top: 10px;
+    }
+
+    
+    .title-icon {
+        font-size: 25px; 
+        margin: 0;
+    }
+
+    .main-content {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    .main-content-banner {
+        height: auto; 
+    }
+
+    .main-content-sub {
+        font-size: 13px; 
+        margin-left: 10px; 
+        margin-top: 10px; 
+    }
+
+    .content {
+        width: 100%; 
+        max-width: 768px; 
+        height: auto; 
+        padding: 5px; 
+    }
+
+    .main-item {
+        align-items: center; 
+        margin-top: 10px; 
+    }
+
+    .item-icon {
+        margin-right: 0; 
+        margin-bottom: 10px; 
+    }
+
+    .icon {
+        height: 30px; 
+        width: 30px; 
+    }
+
+    .icon-description-title {
+        font-size: 16px; 
+        margin-top: 5px;
+    }
+
+    .icon-description-sub {
+        font-size: 14px;
+        margin-top: 0;
+        margin-bottom: 10px; 
+    }
+
+    .line-breaking {
+        width: 100px; 
+    }
+
+    .main-form {
+        padding: 10px; 
+        height: auto; 
+    }
+
+    .judul{
+        font-size: 20px;
+        text-align: center;
+        padding-top: 90px;
+    }
+
+    .main-benefit {
+        align-items: center; 
+        margin-right: 10px;
+    }
+
+    .main-benefit h2 {
+        font-size: 17px; 
+        margin-left: 0; 
+        margin-right: 0; 
+        text-align: center; 
+    }
+
+    .main-list-benefit {
+        align-items: center; 
+        margin-left: 20px;
+    }
+
+    .list-benefit {
+        margin-left: 0; 
+        margin-right: 0; 
+        margin-bottom: 15px; 
+    }
+
+    .list-description h2 {
+        font-size: 14px; 
+        margin-bottom: 20px;
+        text-align: center; 
+    }
+
+    .form-title {
+        font-size: 20px; 
+        margin-left: 10px; 
+        text-align: center;
+    }
+
+    .form-paragraph {
+        font-size: 14px; 
+        margin-left: 10px; 
+        margin-bottom: 20px; 
+        text-align: center;
+    }
+
+    .main-name {
+        font-size: 14px; 
+        margin-left: 20px; 
+    }
+    
+    footer {
+        padding: 20px 10px; 
+        text-align: center; 
+    }
+
+    .main-menu {
+        height: auto; 
+        padding: 10px; 
+        margin-bottom: 20px; 
+    }
+
+    .menu-title {
+        font-size: 24px; 
+    }
+
+    .menu-content {
+        grid-template-columns: 1fr; 
+        grid-gap: 20px; 
+        padding: 10px; 
+    }
+
+    .menu-content img {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .menu-content h2 {
+        font-size: 18px; 
+    }
+
+    .menu-content p {
+        font-size: 14px; 
+    }
+
+    @media (max-width: 576px) {
+        .dropdown-menu{
+            left: 2rem;
+            width: unset;
+        }
+    }
+
+}

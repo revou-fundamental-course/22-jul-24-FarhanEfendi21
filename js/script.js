@@ -87,3 +87,18 @@ window.addEventListener("scroll", function() {
 });
 
 
+document.querySelector('.toggle-btn i').addEventListener('click', function() {
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    dropdownMenu.classList.toggle('active');
+});
+
+window.addEventListener('scroll', function() {
+    const toggleBtn = document.querySelector('.toggle-btn i');
+    if (window.scrollY > 50) { /* Anda dapat menyesuaikan nilai scrollY sesuai kebutuhan */
+        document.body.classList.add('scrolled');
+    } else {
+        document.body.classList.remove('scrolled');
+    }
+});
+
+
