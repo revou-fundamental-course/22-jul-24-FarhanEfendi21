@@ -87,22 +87,23 @@
                         <h2>Safe and Comfortable Travel</h2>
                     </div>
                 </div>
-
-                
             </article>
     
-            <form class="main-form">
+            <form class="main-form" name="formValidate" onsubmit="return validateForm()">
                 <h2 class="form-title">Get Ready & Book Your Tickets.</h2>
                 <p class="form-paragraph">Plan, Book, Explore – All on Traveloft!</p>
 
                 <h2 class="main-name">Your Name :</h2>
-                <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                <input type="text" name="name" id="name" placeholder="Enter your name" >
+                <p id="error-name" class="error-message"></p>
 
                 <h2 class="input-email">Email Adress :</h2>
-                <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                <input type="email" name="email" id="email" placeholder="Enter your email">
+                <p id="error-email" class="error-message"></p>
 
                 <h2 class="input-phonenumber">Phone Number :</h2>
-                <input type="tel" name="phonenumber" id="phone" placeholder="Enter your number" required>
+                <input type="tel" name="phonenumber" id="phone" placeholder="Enter your number" >
+                <p id="error-phone" class="error-message"></p>
 
                 <h2 class="main-destination-title">Destination</h2>
                 <div class="custom-select-wrapper">
@@ -126,13 +127,14 @@
                         </div>
                     </div>
                 </div>
+                <input type="hidden" name="destination" id="main-destination-option">
+                <p id="error-destination" class="error-message"></p>
                 <button type="submit" class="main-form-submit">Let's Go!</button>
             </form>
         </section>
 
         <article class="main-menu">
             <h2 class="menu-title">Our Packages</h2>
-
             <div class="menu-content">
                 <div class="menu-description-paris">
                     <h2>Bali</h2>
@@ -169,8 +171,6 @@
                     <img src="assets/city/seoul.jpg">
                     <p>Seoul, South Korea, mesmerizes with its blend of ancient palaces and cutting-edge technology, vibrant street markets, and rich cultural heritage, offering a unique and dynamic urban experience.</p>
                 </div>
-
-
             </div>   
         </article>
         
@@ -184,8 +184,8 @@
                 <p> &copy; 2024 Traveloft. designed by <span>Parhan</span></p>
             </div>
         </footer>
-    </main>
 
+    </main>
     <script src="js/script.js"></script>
 </body>
 </html>
