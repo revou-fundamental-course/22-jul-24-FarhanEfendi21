@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
+/* Validate Form*/
 function validateForm() {
     var name = document.getElementById('name').value;
     var email = document.getElementById('email').value;

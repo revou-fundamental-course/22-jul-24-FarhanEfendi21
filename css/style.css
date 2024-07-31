@@ -63,6 +63,8 @@ nav {
     color: #3d3d3d;
 }
 
+
+/* Bars button for responsive navbar*/
 .toggle-btn i {
     position: absolute;
     display: none;
@@ -131,7 +133,6 @@ nav {
     background-color: #e8e8e85f; 
     color: #333333; 
 }
-
 
 #item2 {
     text-decoration: none;
@@ -503,7 +504,7 @@ nav {
     justify-content: center;
     width:150px;
     height: 1px;
-    background-color: #e6e6e6;
+    background:  linear-gradient(135deg, #71b7e6,#9b59b6);
 }
 
 /*Benefit*/
@@ -658,13 +659,14 @@ nav {
     padding: 10px 20px;
     margin-bottom: 10px;
     border: 1px solid #9b59b6;
-    background-color: #71b7e641;
+    background-color: #53b7fa41;
     color: rgb(0, 0, 0); 
     text-align: center;
     text-decoration: none; 
     font-family: "Poppins", sans-serif;
     font-size: 17px;
     border-radius: 5px; 
+    font-weight: 500;
     transition: background-color 0.3s; 
 }
 
@@ -901,7 +903,7 @@ footer{
     }
 
     .menu-content p {
-        font-size: 18px; 
+        font-size: 16px; 
         margin-top: 5px;
     }
 
@@ -910,12 +912,12 @@ footer{
     }
 
     .bottom-content h2 {
-        font-size: 20px;
+        font-size: 25px;
         font-weight: 600;
     }
 
     .bottom-content p {
-        font-size: 12px;
+        font-size: 16px;
     } 
     footer {
        
@@ -943,6 +945,14 @@ footer{
             font-size: 15px; 
             margin-top: 5px;
         }
+        .bottom-content h2 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+    
+        .bottom-content p {
+            font-size: 12px;
+        } 
     }
 
     @media (max-width: 576px) {
@@ -951,6 +961,5 @@ footer{
             width: unset;
         }
     }
-
 
 }
