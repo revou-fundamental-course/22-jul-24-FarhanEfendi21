@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traveloft</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css\style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
@@ -17,24 +17,23 @@
             </div> 
 
             <section class="dropdown-menu">
-                <li><a href="" class="drop-items" >Home</a></li>
-                <li><a href="" class="drop-items" >Our Package</a></li>
-                <li><a href="" class="drop-items" >Contact Us</a></li>
+                <li><a href="#main-title" class="drop-items" >Home</a></li>
+                <li><a href="#main-menu" class="drop-items" >Our Package</a></li>
+                <li><a href="#bottom-content" class="drop-items" >Contact Us</a></li>
             </section>
-
         </header>
 
         <section class="nav-container">
-            <a href="" class="nav-items" id="item1">Home</a>
-            <a href="" class="nav-items" id="item2">Our Package</a>
-            <a href="" class="nav-items" id="item3">Contact Us</a>
+            <a href="#main-title" class="nav-items" id="item1">Home</a>
+            <a href="#main-menu" class="nav-items" id="item2">Our Package</a>
+            <a href="#bottom-content" class="nav-items" id="item3">Contact Us</a>
         </section>
 
         
     </nav>
     <main>
         <article>
-            <header class="main-title">
+            <header class="main-title" id="main-title">
                 <h1 class="judul">Traveloft - To Infinity And Beyond</h1><br>
                 <p class="sub-judul">Start Your Journey with Traveloft Today!</p>
             </header>
@@ -43,13 +42,16 @@
         <section class="main-content">
             <article class="main-content-item">
                 <div class="main-content-banner">
-                    <img class="content" src="assets/banner/banner.jpg">
+                    <img class="img-slideshow" src="assets\banner\banner.jpg">
+                    <img class="img-slideshow" src="assets\city\lombok.jpg">
+                    <img class="img-slideshow" src="assets\city\seoul.jpg">
+                    <img class="img-slideshow" src="assets\city\stockholm.jpg">
                     <h2 class="main-content-sub">"Start Your Journey with Traveloft Today!"</h2>
                 </div>
 
                 <div class="main-item">
                     <div class="item-icon">
-                        <img class="icon" src="assets/icon/icon.jpeg" alt="Icon">
+                        <img class="icon" src="assets\icon\icon.jpeg" alt="Icon">
                     </div>
                     
                     <div class="main-description">
@@ -145,59 +147,64 @@
             </form>
         </section>
 
-        <article class="main-menu">
-            <h2 class="menu-title">Our Packages</h2>
+        <article class="main-menu" id="main-menu">
+            <h2 class="menu-title" >Our Packages</h2>
             <div class="menu-content">
                 <div class="menu-description-paris">
                     <h2>Bali</h2>
-                    <img src="assets/city/bali.jpg">
+                    <img src="assets\city\bali.jpg">
                     <p>Bali, Indonesia, enchants with its stunning beaches, rich culture, and breathtaking landscapes, offering a unique and colorful experience for every visitor.</p>
                 </div>
 
                 <div class="menu-description-lombok">
                     <h2>Lombok</h2>
-                    <img src="assets/city/lombok.jpg">
+                    <img src="assets\city\lombok.jpg">
                     <p>Lombok, Indonesia, captivates with its exotic beaches, rich culture, and natural beauty like the majestic Mount Rinjani, offering unique and unforgettable experiences.</p>
                 </div>
 
                 <div class="menu-description-paris">
                     <h2>Paris</h2>
-                    <img src="assets/city/paris.jpg">
+                    <img src="assets\city\paris.jpg">
                     <p>Paris, France, enchants with its iconic landmarks, rich history, and vibrant cultural scene, offering a romantic and unforgettable experience in the heart of Europe.</p>
                 </div>
 
                 <div class="menu-description-barcelona">
                     <h2>Barcelona</h2>
-                    <img src="assets/city/barcelona.jpg">
+                    <img src="assets\city\barcelona.jpg">
                     <p>Barcelona, Spain, captivates with its stunning architecture, rich cultural heritage, and vibrant atmosphere, offering a unique and lively experience on the Mediterranean coast.</p>
                 </div>
 
                 <div class="menu-description-tokyo">
                     <h2>Tokyo</h2>
-                    <img src="assets/city/tokyo.jpeg">
+                    <img src="assets\city\tokyo.jpeg">
                     <p>Tokyo, Japan, dazzles with its futuristic skyline, rich cultural traditions, and bustling city life, offering a unique blend of modernity and heritage in one of the world's most dynamic cities.</p>
                 </div>
 
                 <div class="menu-description-seoul">
                     <h2>Seoul</h2>
-                    <img src="assets/city/seoul.jpg">
+                    <img src="assets\city\seoul.jpg">
                     <p>Seoul, South Korea, mesmerizes with its blend of ancient palaces and cutting-edge technology, vibrant street markets, and rich cultural heritage, offering a unique and dynamic urban experience.</p>
                 </div>
             </div>   
         </article>
         
-        <footer>
-            <div class="footer-content">
-                <h2>Traveloft</h2>
-                <p>Take Care, and Safe Travels!</p>
+        <article class="bottom">
+            <div class="bottom-content" id="bottom-content">
+                <h2>Have Any Questions?</h2>
+                <p>You can get in touch with us anytime you need support. <br> We're here for you around the clock.</p>
                 <a href="#" class="cta-button">Call to Action</a>
             </div>
+        </article>
+
+        <footer>
             <div class="footer-bottom">
+                <h2>Traveloft</h2>
+                <h3>Take Care, and Safe Travels!</h3>
                 <p> &copy; 2024 Traveloft. designed by <span>Parhan</span></p>
             </div>
         </footer>
 
     </main>
-    <script src="js/script.js"></script>
+    <script src="js\script.js"></script>
 </body>
 </html>

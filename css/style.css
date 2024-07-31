@@ -173,7 +173,6 @@ nav {
     color: #333333; 
 }
 
-
 /*Judul Konten*/
 .main-title{
     text-align: center;
@@ -189,7 +188,7 @@ nav {
 }
 
 .sub-judul{
-    font-size: 15px;
+    font-size: 17px;
     font-family: "Poppins", sans-serif;
     margin-top: 0px;
     margin-bottom: 20px;
@@ -222,7 +221,7 @@ nav {
     margin-top: 20px;
 }
 
-.content {
+.img-slideshow {
     width: 750px;
     height: 450px;
     display: block;
@@ -559,7 +558,7 @@ nav {
 .main-menu{
     position: relative;
     width: 100%;
-    height: 800px;
+    height: 850px;
     display: flex;
     flex-direction: column;
     background-color: #f9f9f9;
@@ -614,76 +613,53 @@ nav {
 .menu-content p {
     font-family: "Poppins", sans-serif;
     text-align: center;
+    margin-top: 5px;
 }
 
 
-/*Footer*/
-footer{
-    position: relative;
-    z-index: 1000; 
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(135deg, #71b7e6,#9b59b6);
+/*Bottom Content*/
+.bottom { 
+    margin-bottom: 50px;
+    background:  #f9f9f9;
     height: auto;
     width: 100%;
     font-family: "Poppins", sans-serif;
     padding-top: 30px;
     color: #fff;
 }
-.footer-content{
+
+.bottom-content{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
 }
-.footer-content h2{
+.bottom-content h2{
     font-size: 28px;
-    font-weight: 600;
+    font-weight:600;
     text-transform: capitalize;
     line-height: 5px;
+    color: black;
     margin-bottom: 10px;
 }
 
-.footer-content h3{
-    font-size: 14px;
-    font-weight: 400;
-    text-transform: capitalize;
-    margin-bottom: 5px;
-}
-
-.footer-content p{
+.bottom-content p{
     max-width: 500px;
     margin: 10px auto;
+    margin-bottom: 20px;
     line-height: 28px;
     font-size: 14px;
+    color: black;
 }
 
-.footer-bottom{
-    position: relative;
-    background: linear-gradient(135deg, #71b7e6,#9b59b6);
-    width: 100%;
-    padding: 10px 0;
-    text-align: center;
-    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); ;
-}
-.footer-bottom p{
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;
-}
-.footer-bottom span{
-    text-transform: uppercase;
-    opacity: .4;
-    font-weight: 200;
-}
 .cta-button {
-    display: inline-block;
+    width: 200px;
     padding: 10px 20px;
-    margin-bottom: 20px;
-    background-color: #ffffff3e;
-    color: rgb(255, 255, 255); 
+    margin-bottom: 10px;
+    border: 1px solid #9b59b6;
+    background-color: #71b7e641;
+    color: rgb(0, 0, 0); 
     text-align: center;
     text-decoration: none; 
     font-family: "Poppins", sans-serif;
@@ -697,6 +673,49 @@ footer{
 }
 
 
+/*Footer*/
+footer{
+    position: relative;
+    z-index: 1000; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #71b7e6,#9b59b6);
+    height: 130px;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+
+.footer-bottom{
+    text-align: center;
+    padding: 10px;
+}
+
+.footer-bottom h2 {
+    font-size: 28px;
+    font-weight:500;
+    color: rgb(255, 255, 255);
+}
+
+.footer-bottom h3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+
+.footer-bottom p {
+    font-size: 14;
+
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+
 /*error massage*/
 .error-message {
     color: red;
@@ -704,11 +723,11 @@ footer{
     font-size: 13px;
     margin-left: 20px;
     margin-bottom: 5px;
-    text-align: justify;
 }
 
 
-@media (max-width: 768px) {
+
+@media (max-width: 1500px) {
     nav {
         width: 100%;
         padding: 15px;
@@ -718,7 +737,6 @@ footer{
     .nav-container {
         justify-content: center; 
         margin: 0; 
-        flex-direction: row;
         width: 100%;
         margin-left: 10px;
     }
@@ -761,7 +779,7 @@ footer{
         margin-top: 10px; 
     }
 
-    .content {
+    .img-slideshow {
         width: 100%; 
         max-width: 768px; 
         height: auto; 
@@ -806,7 +824,7 @@ footer{
     .judul{
         font-size: 20px;
         text-align: center;
-        padding-top: 90px;
+        padding-top: 50px;
     }
 
     .main-benefit {
@@ -856,11 +874,6 @@ footer{
         margin-left: 20px; 
     }
     
-    footer {
-        padding: 20px 10px; 
-        text-align: center; 
-    }
-
     .main-menu {
         height: auto; 
         padding: 10px; 
@@ -868,7 +881,8 @@ footer{
     }
 
     .menu-title {
-        font-size: 24px; 
+        font-size: 30px; 
+        text-align: center;
     }
 
     .menu-content {
@@ -883,11 +897,52 @@ footer{
     }
 
     .menu-content h2 {
-        font-size: 18px; 
+        font-size: 30px; 
     }
 
     .menu-content p {
-        font-size: 14px; 
+        font-size: 18px; 
+        margin-top: 5px;
+    }
+
+    .bottom-content {
+        font-size: 20px;
+    }
+
+    .bottom-content h2 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .bottom-content p {
+        font-size: 12px;
+    } 
+    footer {
+       
+        text-align: center; 
+    }
+
+    @media (max-width: 1280px){
+        .main-form {
+            padding: 10px; 
+            height: auto; 
+        }
+    }
+
+
+    @media (max-width: 728px){
+        .menu-title {
+            font-size: 24px; 
+        }
+
+        .menu-content h2 {
+            font-size: 25px; 
+        }
+    
+        .menu-content p {
+            font-size: 15px; 
+            margin-top: 5px;
+        }
     }
 
     @media (max-width: 576px) {
@@ -896,5 +951,6 @@ footer{
             width: unset;
         }
     }
+
 
 }

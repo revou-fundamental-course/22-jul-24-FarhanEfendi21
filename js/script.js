@@ -1,4 +1,4 @@
-/*Destination Form*/
+/*Destination Select Option*/
 document.addEventListener("DOMContentLoaded", function() {
     const customSelect = document.querySelector(".custom-select");
     const customSelectTrigger = customSelect.querySelector(".custom-select-trigger");
@@ -36,6 +36,7 @@ function validateForm() {
     document.getElementById('error-email').innerHTML = '';
     document.getElementById('error-phone').innerHTML = '';
     document.getElementById('error-destination').innerHTML = '';
+    
 
     // Validate name
     if (name === '') {
@@ -76,7 +77,7 @@ function validateForm() {
     return isValid;
 }
 
-/* NavBar Scrolled*/
+/* Navbar auto scroll*/
 window.addEventListener("scroll", function() {
     var header = document.getElementById("navbar");
     if (window.scrollY > 0) {
@@ -86,7 +87,34 @@ window.addEventListener("scroll", function() {
     }
 });
 
+/*Banner auto slide*/
+    var slideIndex = 1;
+    showDivs(slideIndex);
 
+
+    setInterval(function() {
+        plusDivs(1);
+    }, 2000); 
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var imgList = document.getElementsByClassName("img-slideshow");
+    if (n > imgList.length) slideIndex = 1;
+    if (n < 1) slideIndex = imgList.length;
+
+    for (i = 0; i < imgList.length; i++) {
+        imgList[i].style.display = "none"; 
+    }
+
+    imgList[slideIndex - 1].style.display = "block"; 
+}
+
+
+/* Dropdown menu for navbar responsive*/
 document.querySelector('.toggle-btn i').addEventListener('click', function() {
     const dropdownMenu = document.querySelector('.dropdown-menu');
     dropdownMenu.classList.toggle('active');
@@ -94,11 +122,16 @@ document.querySelector('.toggle-btn i').addEventListener('click', function() {
 
 window.addEventListener('scroll', function() {
     const toggleBtn = document.querySelector('.toggle-btn i');
-    if (window.scrollY > 50) { /* Anda dapat menyesuaikan nilai scrollY sesuai kebutuhan */
+    if (window.scrollY > 50) { 
         document.body.classList.add('scrolled');
     } else {
         document.body.classList.remove('scrolled');
     }
 });
 
+window.onload = function() {
+    document.getElementById("main-menu").scrollIntoView({ behavior: "smooth" });
+    document.getElementById("bottom-content").scrollIntoView({ behavior: "smooth" });
+    document.getElementById("main-title").scrollIntoView({ behavior: "smooth" });
+};
 
