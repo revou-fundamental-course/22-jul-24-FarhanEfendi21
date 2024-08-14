@@ -131,9 +131,26 @@ window.addEventListener('scroll', function() {
     }
 });
 
+
 window.onload = function() {
+    
     document.getElementById("main-menu").scrollIntoView({ behavior: "smooth" });
     document.getElementById("bottom-content").scrollIntoView({ behavior: "smooth" });
     document.getElementById("main-title").scrollIntoView({ behavior: "smooth" });
 };
+
+
+window.onload = function() {
+
+    console.log("Halaman dimuat tanpa scroll otomatis.");
+};
+
+function scrollToSection(sectionId) {
+    document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+}
+
+document.getElementById("scrollButton").addEventListener("click", function() {
+    scrollToSection("main-menu");
+});
+
 
